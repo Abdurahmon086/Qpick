@@ -1,0 +1,75 @@
+.head {
+    height: 60px;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        column-gap: 75px;
+    }
+
+    &__navlink {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    &__list {
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: url(../../../public/bottom.svg);
+            top: -2px;
+            right: -15px;
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        padding: 20px;
+        position: relative;
+
+        .icon {
+            &__text {
+                position: absolute;
+                width: 17.5px;
+                height: 17.5px;
+                background: #FFA542;
+                top: 12px;
+                right: 12px;
+                text-align: center;
+                border-radius: 50%;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    &__item {
+        // position: absolute;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.h {
+    position: absolute;
+}
+
+
+// <ul className="item__list">
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
+// </ul>
