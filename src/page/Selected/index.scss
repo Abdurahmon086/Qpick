@@ -1,0 +1,181 @@
+.selected {
+    margin-top: 29px;
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 15px;
+        justify-content: space-between;
+    }
+
+    &__left {
+        max-width: 633px;
+    }
+
+    &__list {
+        width: 100%;
+        position: relative;
+
+        .cards {
+            &__delete {
+                position: absolute;
+                top: 18px;
+                right: 28px;
+            }
+
+            &__item {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                padding: 18px 28px 18px 18px;
+            }
+
+            &__top {
+                display: flex;
+                align-items: center;
+                column-gap: 23px;
+            }
+
+            &__title {
+                font-size: 17px;
+                line-height: 21px;
+                margin-bottom: 12px;
+            }
+
+            &__sp {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 18px;
+                color: #AAAAAA;
+            }
+
+            &__bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 17px;
+            }
+
+            &__left {
+                display: flex;
+                align-items: center;
+                column-gap: 23px;
+            }
+
+            &__btn {
+                background: #FFCE7F;
+                width: 35px;
+                height: 30px;
+                border: #FFCE7F;
+                border-radius: 50%;
+                color: #FFFFFF;
+                font-size: 28px;
+            }
+
+            &__count {
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 21px;
+                color: #000000;
+            }
+
+            &__total-price {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__bottom {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        padding: 15px 18px 25px 30px;
+        margin-top: 13px;
+
+        .bottom {
+            &__title {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #000000;
+                margin-bottom: 17px;
+            }
+
+            &__inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 21px;
+            }
+
+            &__left {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+            }
+
+            &__text {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                color: #000000;
+            }
+
+            &__sp {
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+    }
+
+    &__right {
+        width: 350px;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        height: 114px;
+        padding: 22px;
+    }
+
+    &__total-title {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+    }
+
+    &__total-price {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+    }
+
+    &__total-btn {
+        background: #101010;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 21px;
+        padding: 22px 0;
+        width: 100%;
+        transform: translateY(-60px);
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+}

@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.4",
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
+    "google-map-react": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",

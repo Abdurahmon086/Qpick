@@ -1,0 +1,56 @@
+.foo {
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 60px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    &__link {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 21px;
+        color: #000000;
+    }
+
+    &__lang {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        margin-top: 35px;
+    }
+
+    &__list-lang {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+
+    &__item-lang {
+        color: #101010;
+
+        &:hover {
+            color: #FFA542;
+            transition: 0.5s all;
+        }
+        
+        &:active {
+            color: #FFA542;
+            transition: 2s all;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        column-gap: 17px;
+    }
+}

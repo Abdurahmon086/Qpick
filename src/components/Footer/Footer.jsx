@@ -6,6 +6,7 @@ import instagram from '../../../public/instagram.svg'
 import telegram from '../../../public/telegram.svg'
 import whatsapp from '../../../public/whatsapp.svg'
 import { Link } from 'react-router-dom'
+import './index.scss'
 
 function Footer() {
     return (
@@ -17,13 +18,13 @@ function Footer() {
 
                 <div className="foo__middle-left">
                     <ul className='foo__list'>
-                        <li className='foo__item'><Link to='/products' className='foo__link'>Избранное</Link></li>
+                        <li className='foo__item'><Link to='/' className='foo__link'>Избранное</Link></li>
                         <li className='foo__item'><Link to='/card' className='foo__link'>Корзина</Link></li>
                         <li className='foo__item'><Link to='/contacts' className='foo__link'>Контакты</Link></li>
                     </ul>
                 </div>
                 <div className="foo__middle-right">
-                    <p className='foo__item'><Link to='/products' className='foo__link'>Избранное</Link></p> 
+                    <p className='foo__item'><Link to='/service-requirements' className='foo__link'>Условия сервиса</Link></p> 
                     <div className="foo__lang">
                         <img src={lang} alt="lang icon" />
                         <ul className='foo__list-lang'> 

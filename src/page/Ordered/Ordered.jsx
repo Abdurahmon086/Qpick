@@ -1,0 +1,19 @@
+import './index.scss'
+
+function Ordered() {
+    return (
+        <div className='container'>
+            <section className='ordered'>
+                <ul className='ordered__list'>
+                    <li className='ordered__item'>
+                        <p className='ordered__text'>
+                            Номер вашего заказа №123123, с Вами свяжется наш менеджер.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    )
+}
+
+export default Ordered

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../../../public/logo.svg'
 import mobile from '../../../public/mobile.svg'
 import like from '../../../public/like.svg'
@@ -15,8 +15,6 @@ function Header() {
     useEffect(() => {
         postApi.getCategory().then(res => setCategory(res.data))
     }, [])
-    console.log(listClick);
-    console.log(category);
     const a = 2
 
     return (
@@ -50,8 +48,10 @@ function Header() {
                     {a.length == 0 ? '' : <p className='icon__text'>{a}</p>}
                 </div>
                 <div className="head__icon icon">
-                    <img className='icon__img' src={basket} alt="basket icon" width={22} height={20} />
+                    <NavLink to='/card' >
+                        <img className='icon__img' src={basket} alt="basket icon" width={22} height={20} />
                     {a.length == 0 ? '' : <p className='icon__text'>{a}</p>}
+                    </NavLink>
                 </div>
             </div>
         </div>

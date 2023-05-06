@@ -1,0 +1,291 @@
+.ordering {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 85%;
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 12px;
+    }
+
+    &__wrapper {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    &__left {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        max-width: 445px;
+        padding: 23px 30px 32px 40px;
+
+        .left {
+            &__top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+
+            &__title {
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 21px;
+                color: #000000;
+            }
+
+            &__price {
+                font-size: 15px;
+                line-height: 18px;
+                color: #000000;
+            }
+
+            &__map {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                margin-top: 20px;
+            }
+
+            &__map-text {
+                font-size: 15px;
+                line-height: 18px;
+                color: #000000;
+            }
+
+            &__from {
+                margin-top: 16px;
+            }
+
+            &__section {
+                background: #D6D6D6;
+                border-radius: 15px;
+                width: 100%;
+                padding: 14px;
+                border: none;
+                outline: none;
+            }
+
+            &__form-input {
+                width: 100%;
+                margin-top: 10px;
+                position: relative;
+                background: #D6D6D6;
+                border-radius: 15px;
+
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #8E8E8E;
+                }
+
+                &::after {
+                    content: url(../../../public/pen.svg);
+                    position: absolute;
+                    top: 12px;
+                    right: 14px;
+                }
+
+                input {
+                    width: 90%;
+                    padding: 14px;
+                    background: inherit;
+                    border: none;
+                    outline: none;
+                    border-radius: 15px;
+                }
+            }
+
+            &__form-inner {
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                gap: 13px 30px;
+                flex-wrap: wrap;
+            }
+
+            &__form-inputs {
+                width: 172px;
+                position: relative;
+                background: #D6D6D6;
+                border-radius: 15px;
+
+                &::placeholder {
+                    font-weight: 500;
+                    font-size: 15px;
+                    line-height: 18px;
+                    color: #8E8E8E;
+                }
+
+                &::after {
+                    content: url(../../../public/pen.svg);
+                    position: absolute;
+                    top: 12px;
+                    right: 14px;
+                }
+
+                input {
+                    width: 90%;
+                    padding: 14px;
+                    background: inherit;
+                    border: none;
+                    outline: none;
+                    border-radius: 15px;
+                }
+            }
+
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        width: 445px;
+
+        .right {
+
+            &__order {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                padding: 15px 20px;
+                width: 100%;
+
+                .order {
+                    &__title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #000000;
+                    }
+
+                    &__inner {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 25px;
+                    }
+
+                    &__count {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &__left {
+                        margin-left: 35px;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 12px;
+                    }
+
+                    &__right {
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: 12px;
+                    }
+                }
+            }
+
+            &__payment {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                padding: 15px;
+
+                .payment {
+                    &__title {
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #000000;
+                    }
+
+                    &__cart {
+                        margin-top: 20px;
+                        display: flex;
+                        align-items: center;
+                        column-gap: 10px;
+                    }
+
+                    &__text {
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #000000;
+                    }
+
+                    &__text-code {
+                        font-size: 15px;
+                        line-height: 18px;
+                        color: #838383;
+                    }
+                }
+            }
+
+            &__number {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 30px;
+                padding: 15px;
+
+                .number {
+                    &__title {
+                        font-weight: 600;
+                        font-size: 17px;
+                        line-height: 21px;
+                        color: #000000;
+                        margin-bottom: 20px;
+                    }
+
+                    &__input {
+                        width: 100%;
+                        margin-top: 10px;
+                        position: relative;
+                        background: #D6D6D6;
+                        border-radius: 15px;
+
+                        &::placeholder {
+                            font-weight: 500;
+                            font-size: 15px;
+                            line-height: 18px;
+                            color: #8E8E8E;
+                        }
+
+                        &::after {
+                            content: url(../../../public/pen.svg);
+                            position: absolute;
+                            top: 12px;
+                            right: 14px;
+                        }
+
+                        input {
+                            width: 90%;
+                            padding: 14px;
+                            background: inherit;
+                            border: none;
+                            outline: none;
+                            border-radius: 15px;
+                        }
+                    }
+                }
+            }
+
+            &__btn {
+                font-size: 15px;
+                line-height: 18px;
+                color: #FFFFFF;
+                width: 100%;
+                cursor: pointer;
+                padding: 14px 0;
+                background: #101010;
+                box-shadow: 0px 0px 20px rgba(67, 216, 84, 0.25);
+                border-radius: 10px;
+            }
+        }
+    }
+}
