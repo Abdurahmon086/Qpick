@@ -5,6 +5,7 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     padding: 15px 21px 32px 21px;
+    position: relative;
 
     &__top {
         position: relative;
@@ -14,14 +15,19 @@
 
     &__top-img {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 15px;
+        left: 22px;
+        z-index: 9;
+        border: none;
+        background: none;
     }
 
     &__img-main {
         text-align: center;
         margin: 0 auto;
         display: block;
+        width: 219.8px;
+        height: 295px;
     }
 
     &__inner {
@@ -52,5 +58,109 @@
         align-items: center;
         margin-top: 25px;
         column-gap: 10px;
+    }
+}
+
+@media only screen and (max-width : 1150px) {
+    .card {
+        width: 250px;
+        height: 207.7px;
+        border-radius: 15px;
+        padding: 10px 12px;
+        margin: 0 auto;
+
+        &__top {
+            position: relative;
+            width: 100%;
+            height: 127px;
+        }
+
+        &__top-img {
+            top: 10px;
+            left: 18px;
+        }
+
+        &__img-main {
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            max-width: 100px;
+            height: 110px;
+            margin-top: 10px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__sp {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__reting {
+            margin-top: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width : 720px) {
+    .card {
+        width: 170px;
+    }
+}
+
+@media only screen and (max-width : 428px) {
+    .card {
+        width: 170px;
+        height: 207.7px;
+        border-radius: 15px;
+        padding: 10px 12px;
+
+        &__top {
+            position: relative;
+            width: 100%;
+            height: 127px;
+        }
+
+        &__top-img {
+            top: 10px;
+            left: 18px;
+        }
+
+        &__img-main {
+            text-align: center;
+            margin: 0 auto;
+            display: block;
+            max-width: 100px;
+            height: 110px;
+            margin-top: 10px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__sp {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        &__reting {
+            margin-top: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width : 406px) {
+    .card {
+        width: 140px;
+    }
+}
+@media only screen and (max-width : 356px) {
+    .card {
+        width: 120px;
     }
 }

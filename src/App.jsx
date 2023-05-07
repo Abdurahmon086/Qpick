@@ -11,6 +11,7 @@ import ErrorCard from './components/Error/ErrorCard'
 import Selected from './page/Selected/Selected'
 import Ordering from './page/Ordering/Ordering'
 import Ordered from './page/Ordered/Ordered'
+import ErrorPage from './components/Error/ErrorPage'
 
 function App() {
 
@@ -29,10 +30,10 @@ function App() {
             <Route path='/service-requirements' element={<ServiceRequirements />} />
             <Route path='/contacts' element={<Contacts />} />
             <Route path='/s' element={<ErrorCard />} />
-            <Route path='/card' element={<Selected />} />
+            <Route path='/selected' element={<Selected />} />
             <Route path='/ordering' element={<Ordering />} />
             <Route path='/ordered' element={<Ordered />} />
-            {/* <Route path='/selected' element={<Home />} /> */}
+            <Route path='*' element={<ErrorPage />} />
           </Routes>
         </main>
         <footer>

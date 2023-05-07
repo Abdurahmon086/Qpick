@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../../public/logo.svg'
-import lang from '../../../public/lang.svg'
+import lang from '../../../public/Lang.svg'
 import wk from '../../../public/wk.svg'
 import instagram from '../../../public/instagram.svg'
 import telegram from '../../../public/telegram.svg'
@@ -19,7 +19,7 @@ function Footer() {
                 <div className="foo__middle-left">
                     <ul className='foo__list'>
                         <li className='foo__item'><Link to='/' className='foo__link'>Избранное</Link></li>
-                        <li className='foo__item'><Link to='/card' className='foo__link'>Корзина</Link></li>
+                        <li className='foo__item'><Link to='/selected' className='foo__link'>Корзина</Link></li>
                         <li className='foo__item'><Link to='/contacts' className='foo__link'>Контакты</Link></li>
                     </ul>
                 </div>

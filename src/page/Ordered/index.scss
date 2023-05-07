@@ -1,5 +1,5 @@
 .ordered {
-    width: 730px;
+    // width: 730px;
     margin: 0 auto;
     margin-top: 40px;
 
@@ -23,4 +23,44 @@
         line-height: 21px;
         color: #1C1C27;
     }
+
+    &__link {
+        display: none;
+    }
 }
+
+@media only screen and (max-width:720px) {
+    .ordered {
+        margin-top: 20px;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+
+        &__link {
+            display: block;
+            margin-top: auto;
+            background: #101010;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 15px;
+            padding: 22px 0;
+
+        }
+
+        &__btn {
+            background: inherit;
+            border: none;
+            width: 100%;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+    }
+}
+

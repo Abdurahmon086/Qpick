@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 function Ordered() {
@@ -11,6 +12,9 @@ function Ordered() {
                         </p>
                     </li>
                 </ul>
+                <Link to='/' className='ordered__link'>
+                    <button className='ordered__btn'>На главную</button>
+                </Link>
             </section>
         </div>
     )

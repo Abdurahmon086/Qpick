@@ -3,34 +3,55 @@ import del from '../../../public/delete.svg'
 import car from '../../../public/car.svg'
 import './index.scss'
 import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { dec, inc, remove } from '../../redux/action/action'
+import ErrorCard from '../../components/Error/ErrorCard'
+import { useState } from 'react'
 function Selected() {
+
+    const { data, count } = useSelector(res => res)
+    const dispatch = useDispatch()
+    localStorage.setItem('data', JSON.stringify(data))
+    console.log(data);
+
     return (
         <div className='container'>
-            <section className="selected">
+
+            {data && data.length > 0 ? <section className="selected">
                 <h4 className="selected__title">Корзина</h4>
                 <div className="selected__wrapper">
                     <div className="selected__left">
                         <ul className="selected__list cards">
-                            <li className="cards__item">
-                                <img src={del} alt="delete icon" className='cards__delete' />
-                                <div className="cards__top">
-                                    <img src="" alt="" width={146} height={136} />
-                                    <div className="cards__inner">
-                                        <h4 className="cards__title">Apple BYZ S852I</h4>
-                                        <span className='cards__sp'>2 927 ₸</span>
-                                    </div>
-                                </div>
-                                <div className="cards__bottom">
-                                    <div className="cards__left">
-                                        <button className='cards__btn'>-</button>
-                                        <p className='cards__count'>1</p>
-                                        <button className='cards__btn'>+</button>
-                                    </div>
-                                    <div className="cards__right">
-                                        <span className='cards__total-price'> 2 927 ₸</span>
-                                    </div>
-                                </div>
-                            </li>
+                            {
+                                data.map((item) => {
+                                    return <li className="cards__item" key={item.id}>
+                                        <img onClick={() => dispatch(remove(item.id))} src={del} alt="delete icon" className='cards__delete' />
+                                        <div className="cards__top">
+                                            <img src={item.image} alt={item.title} width={146} height={136} />
+                                            <div className="cards__inner">
+                                                <h4 className="cards__title">{item.title}</h4>
+                                                <span className='cards__sp'>{item.price}$</span>
+                                            </div>
+                                        </div>
+                                        <div className="cards__bottom">
+                                            <div className="cards__left">
+                                                <button className='cards__btn' onClick={() => {
+                                                    if (item.qty > 1) {
+                                                        dispatch(dec(item.id))
+                                                    } else {
+                                                        dispatch(remove(item.id))
+                                                    }
+                                                }}> -</button>
+                                                <p className='cards__count'>{item.qty}</p>
+                                                <button className='cards__btn' onClick={() => dispatch(inc(item.id))}>+</button>
+                                            </div>
+                                            <div className="cards__right">
+                                                <span className='cards__total-price'> {item.qty * item.price}$</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                })
+                            }
                         </ul>
                         <div className="selected__bottom bottom">
                             <h4 className="bottom__title">Доставка</h4>
@@ -69,8 +90,8 @@ function Selected() {
                         </Link>
                     </div>
                 </div>
-            </section>
-        </div>
+            </section > : <ErrorCard />}
+        </div >
     )
 }
 

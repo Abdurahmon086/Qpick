@@ -6,6 +6,7 @@ import basket from '../../../public/basket.svg'
 import postApi from '../../api/post'
 import './index.scss'
 import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 
 function Header() {
@@ -15,7 +16,9 @@ function Header() {
     useEffect(() => {
         postApi.getCategory().then(res => setCategory(res.data))
     }, [])
-    const a = 2
+    const { likes } = useSelector(res => res)
+
+    const data = JSON.parse(localStorage.getItem('data'))
 
     return (
         <div className='head container'>
@@ -43,18 +46,19 @@ function Header() {
                 </nav>
             </div>
             <div className="head__right">
-                <div className="head__icon icon">
-                    <img className='icon__img' src={like} alt="like icon" width={22} height={20} />
-                    {a.length == 0 ? '' : <p className='icon__text'>{a}</p>}
+                <div className="head__icon icon like">
+                    <img className='icon__img like' src={like} alt="like icon" width={22} height={20} />
+                    {/* {likes ? '' : <p className='icon__text like'>{likes.length}</p>} */}
                 </div>
                 <div className="head__icon icon">
                     <NavLink to='/card' >
-                        <img className='icon__img' src={basket} alt="basket icon" width={22} height={20} />
-                    {a.length == 0 ? '' : <p className='icon__text'>{a}</p>}
-                    </NavLink>
-                </div>
+                        <img className='icon__img ' src={basket} alt="basket icon" width={22} height={20} />
+                        {data.length > 0 ? <p className='icon__text'>{data.length}</p> : ''}
+                </NavLink>
             </div>
+            <button className='head__menu'>M</button>
         </div>
+        </div >
     )
 }
 

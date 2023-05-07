@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './index.scss'
 
 function ServiceRequirements() {
@@ -33,6 +34,9 @@ function ServiceRequirements() {
                         })
                     }
                 </ul>
+                <Link to='/' className='service__link-h'>
+                <button className='service__btn-home'>На главную</button>
+                </Link>
             </div>
         </div>
     )

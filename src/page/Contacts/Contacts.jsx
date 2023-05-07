@@ -6,6 +6,7 @@ import wk from '../../../public/wk.svg'
 import instagram from '../../../public/instagram.svg'
 import tel from '../../../public/tel.svg'
 import './index.scss'
+import { Link } from 'react-router-dom';
 
 function Contacts() {
 
@@ -15,7 +16,7 @@ function Contacts() {
                 <div className="contact__wrapper">
                     <div className="contact__left">
                         <h4 className="contact__title">Наш офис</h4>
-                        <YMaps >
+                        <YMaps>
                             <Map
                                 width={722}
                                 height={424}
@@ -50,6 +51,9 @@ function Contacts() {
                     <img src={tel} alt="telefon icon" />
                     <span className='contact__tel'>+7 777 777 77 77</span>
                 </div>
+                <Link to='/' className='contact__link-h'>
+                <button className='contact__btn-home'>На главную</button>
+                </Link>
             </div>
         </div >
     )

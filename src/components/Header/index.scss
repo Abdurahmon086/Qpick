@@ -57,19 +57,39 @@
         display: flex;
         flex-direction: column;
     }
+
+    &__menu {
+        display: none;
+    }
 }
 
 .h {
     position: absolute;
 }
 
+@media only screen and (max-width: 720px) {
+    .head {
+        &__navlink {
+            display: none;
+        }
 
-// <ul className="item__list">
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// <li className='item__items'><p className='item__text'>iPhone 12</p></li>
-// </ul>
+
+        &__right {
+            display: flex;
+            align-items: center;
+        }
+
+        &__icon {
+            .like {
+                display: none;
+            }
+        }
+
+        &__menu {
+            display: block;
+            margin-left: 44px;
+        }
+
+    }
+
+}

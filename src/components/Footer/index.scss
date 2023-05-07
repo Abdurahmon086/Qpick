@@ -41,7 +41,7 @@
             color: #FFA542;
             transition: 0.5s all;
         }
-        
+
         &:active {
             color: #FFA542;
             transition: 2s all;
@@ -52,5 +52,11 @@
         display: flex;
         align-items: center;
         column-gap: 17px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .foo {
+        display: none;
     }
 }

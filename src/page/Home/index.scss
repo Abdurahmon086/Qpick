@@ -10,4 +10,73 @@
         color: #1C1C27;
     }
 
+    &__img {
+        max-width: 1100px;
+    }
+
+}
+
+@media only screen and (max-width: 1146px) {
+    .hero {
+        &__img {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+@media only screen and (max-width: 1026px) {
+    .hero {
+        &__img {
+            max-width: 900px;
+        }
+    }
+}
+
+@media only screen and (max-width: 928px) {
+    .hero {
+        &__img {
+            max-width: 780px;
+        }
+    }
+}
+
+@media only screen and (max-width: 814px) {
+    .hero {
+        &__img {
+            max-width: 590px;
+        }
+    }
+}
+
+@media only screen and (max-width: 604px) {
+    .hero {
+        &__img {
+            max-width: 420px;
+        }
+    }
+}
+
+@media only screen and (max-width: 428px) {
+    .hero {
+
+        &__list {
+            gap: 16px;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        &__img {
+            max-width: 379px;
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .hero {
+        &__img {
+            display: none;
+        }
+    }
 }
