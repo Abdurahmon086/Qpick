@@ -53,7 +53,7 @@ function Header() {
                 <div className="head__icon icon">
                     <NavLink to='/card' >
                         <img className='icon__img ' src={basket} alt="basket icon" width={22} height={20} />
-                        {data.length > 0 ? <p className='icon__text'>{data.length}</p> : ''}
+                        {/* {data.length > 0 ? <p className='icon__text'>{data.length}</p> : ''} */}
                 </NavLink>
             </div>
             <button className='head__menu'>M</button>
