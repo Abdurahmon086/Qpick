@@ -3,7 +3,7 @@ import map from '../../../public/map.svg'
 import telegram from '../../../public/telegram.svg'
 import watsapp from '../../../public/whatsapp.svg'
 import wk from '../../../public/wk.svg'
-import instagram from '../../../public/instagram.svg'
+import instagram from '../../../public/Instagram.svg'
 import tel from '../../../public/tel.svg'
 import './index.scss'
 import { Link } from 'react-router-dom';
