@@ -64,6 +64,7 @@ const reducerStore = (state = initialState, action) => {
 
             return { ...state.data, data: [...tempstate3] };
 
+         
         default: return state;
 
 

@@ -6,6 +6,7 @@ import './index.scss'
 import { Link } from 'react-router-dom'
 
 function Ordering() {
+    const total = JSON.parse(localStorage.getItem('total'))
     return (
         <div className='container'>
             <section className='ordering'>
@@ -19,7 +20,7 @@ function Ordering() {
                                 <ul className="other__left">
                                     <li>
                                         <p className='other__text'>Наушники Apple BYZ S852I</p>
-                                        <span className='other__price'>₸ 2 927</span>
+                                        <span className='other__price'>{total}$</span>
                                     </li>
                                 </ul>
                             </div>
@@ -85,7 +86,7 @@ function Ordering() {
                             </div>
                             <div className='other__total'>
                                 <p className='other__text-total'>К оплате</p>
-                                <span className='other__price-total'>₸ 2 927</span>
+                                <span className='other__price-total'>{total}$</span>
                             </div>
                         </div>
                     </div>
@@ -97,15 +98,15 @@ function Ordering() {
                                 <ul className="order__left">
                                     <li>
                                         <p className='order__text'>Наушники Apple BYZ S852I</p>
-                                        <span className='order__price'>₸ 2 927</span>
+                                        <span className='order__price'>{total}$</span>
                                     </li>
                                     <li>
                                         <p className='order__text'>Доставка</p>
-                                        <span className='order__price'>₸ 2 927</span>
+                                        <span className='order__price'>3$</span>
                                     </li>
                                     <li>
                                         <p className='order__text'>К оплате</p>
-                                        <span className='order__price'>₸ 2 927</span>
+                                        <span className='order__price'>{total}$</span>
                                     </li>
                                 </ul>
                             </div>

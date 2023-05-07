@@ -12,8 +12,10 @@ function Selected() {
     const { data, count } = useSelector(res => res)
     const dispatch = useDispatch()
     localStorage.setItem('data', JSON.stringify(data))
-    console.log(data);
+    const [sum, setSum] = useState({})
+    const total = ((sum.qty + 1) * sum.price) + 3
 
+    localStorage.setItem('total', JSON.stringify(total))
     return (
         <div className='container'>
 
@@ -37,13 +39,13 @@ function Selected() {
                                             <div className="cards__left">
                                                 <button className='cards__btn' onClick={() => {
                                                     if (item.qty > 1) {
-                                                        dispatch(dec(item.id))
+                                                        (dispatch(dec(item.id)), setSum({ qty: item.qty, price: item.price }))
                                                     } else {
                                                         dispatch(remove(item.id))
                                                     }
                                                 }}> -</button>
                                                 <p className='cards__count'>{item.qty}</p>
-                                                <button className='cards__btn' onClick={() => dispatch(inc(item.id))}>+</button>
+                                                <button className='cards__btn' onClick={() => (dispatch(inc(item.id)), setSum({ qty: item.qty, price: item.price }))}>+</button>
                                             </div>
                                             <div className="cards__right">
                                                 <span className='cards__total-price'> {item.qty * item.price}$</span>
@@ -81,7 +83,7 @@ function Selected() {
                     <div className="selected__right">
                         <div className="selected__total">
                             <h4 className="selected__total-title">ИТОГО</h4>
-                            <span className='selected__total-price'>₸ 2 927</span>
+                            <span className='selected__total-price'>{total}$</span>
                         </div>
                         <Link to='/ordering' className='selected__link'>
                             <button className='selected__total-btn'>
