@@ -51,7 +51,7 @@ function Header() {
                     {/* {likes ? '' : <p className='icon__text like'>{likes.length}</p>} */}
                 </div>
                 <div className="head__icon icon">
-                    <NavLink to='/card' >
+                    <NavLink to='/selected' >
                         <img className='icon__img ' src={basket} alt="basket icon" width={22} height={20} />
                         {/* {data.length > 0 ? <p className='icon__text'>{data.length}</p> : ''} */}
                 </NavLink>
